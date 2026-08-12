@@ -1,0 +1,2 @@
+import type { MetadataRoute } from "next";import { products } from "./data";
+export default function sitemap():MetadataRoute.Sitemap{const base="https://skillbridge-academy-ahmedabad.aagarwal1802.chatgpt.site";const routes=["","/shop","/flowers","/gift-hampers","/personalised-gifts","/occasions","/custom-gift","/corporate","/about","/contact","/order"];return [...routes.map(route=>({url:`${base}${route}`,changeFrequency:"weekly" as const,priority:route===""?1:.8})),...products.map(p=>({url:`${base}/products/${p.slug}`,changeFrequency:"weekly" as const,priority:.7}))]}

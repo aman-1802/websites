@@ -1,0 +1,46 @@
+export const business = {
+  name: "Petal & Parcel",
+  tagline: "Flowers, thoughtful gifts and beautiful moments—delivered.",
+  phone: "+91 79 4890 2216",
+  whatsapp: "917948902216",
+  email: "hello@petalandparcel.example",
+  address: "12, Aarohi Arcade, Near Vijay Cross Road, Navrangpura, Ahmedabad 380009",
+  hours: "Monday–Saturday, 9:00 AM–8:00 PM · Sunday, 10:00 AM–6:00 PM",
+  cutOff: "1:00 PM",
+  areas: ["Navrangpura", "Satellite", "Bodakdev", "Prahlad Nagar", "Thaltej", "Vastrapur", "Paldi", "Chandkheda"],
+};
+
+export type Product = {
+  id:string; slug:string; name:string; category:string; type:string; price:number; starting?:boolean;
+  image:string; color:string; occasions:string[]; recipients:string[]; description:string; included:string[];
+  sizes:string[]; sameDay?:boolean; personalised?:boolean; featured?:boolean; badge:string; care?:string;
+};
+
+export const products: Product[] = [
+  {id:"p1",slug:"blush-rose-bouquet",name:"Blush Rose Bouquet",category:"Flowers",type:"Hand-tied rose bouquet",price:899,image:"https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1000&q=85",color:"#e8b7b7",occasions:["Birthday","Anniversary","Romantic"],recipients:["For Her","For Parents"],description:"Soft blush roses, seasonal fillers and eucalyptus, hand-tied in textured paper for a graceful everyday surprise.",included:["12 blush roses","Seasonal fillers","Premium wrap and ribbon","Message card"],sizes:["Classic · 12 stems","Grand · 20 stems","Statement · 30 stems"],sameDay:true,personalised:true,featured:true,badge:"Fresh flowers",care:"Trim stems at an angle and refresh clean water daily."},
+  {id:"p2",slug:"sunshine-flower-basket",name:"Sunshine Mixed-Flower Basket",category:"Flowers",type:"Seasonal basket arrangement",price:1299,image:"https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1000&q=85",color:"#e7c86a",occasions:["Birthday","Congratulations","Thank You"],recipients:["For Her","For Parents","For Colleagues"],description:"A cheerful mix of yellow, white and peach seasonal blooms arranged in a reusable basket.",included:["Seasonal mixed flowers","Reusable basket","Greenery","Message card"],sizes:["Petite","Classic","Grand"],sameDay:true,featured:true,badge:"Seasonal edit",care:"Keep the floral foam lightly moist and away from direct sunlight."},
+  {id:"p3",slug:"chocolate-celebration-hamper",name:"Chocolate Celebration Hamper",category:"Hampers",type:"Chocolate & snack hamper",price:1499,image:"https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=85",color:"#bb7c58",occasions:["Birthday","Congratulations","Festival"],recipients:["For Him","For Her","For Children"],description:"A crowd-pleasing box of chocolates, cookies and savoury treats dressed with ribbon and a personal note.",included:["Assorted chocolates","Artisan cookies","Savoury snack","Keepsake box"],sizes:["Joy","Celebration","Abundant"],sameDay:true,personalised:true,featured:true,badge:"Bestseller"},
+  {id:"p4",slug:"self-care-gift-box",name:"Pause & Pamper Gift Box",category:"Hampers",type:"Self-care gift hamper",price:1899,image:"https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1000&q=85",color:"#c6b5a7",occasions:["Birthday","Thank You","Get Well Soon"],recipients:["For Her","For Colleagues"],description:"A calming collection of bath, candle and tea-time comforts for a thoughtful pause.",included:["Scented candle","Bath salts","Herbal tea","Chocolate bar","Keepsake box"],sizes:["Classic","Premium"],personalised:true,featured:true,badge:"Customisable"},
+  {id:"p5",slug:"personalised-photo-frame-set",name:"Personalised Photo Frame Set",category:"Personalised",type:"Custom keepsake",price:799,image:"https://images.unsplash.com/photo-1532592068623-db1978e40df5?auto=format&fit=crop&w=1000&q=85",color:"#bda78f",occasions:["Birthday","Anniversary","Romantic"],recipients:["For Him","For Her","For Parents"],description:"A clean two-frame desk set personalised with your photographs, names and a short date or message.",included:["Two desk frames","Photo print setup","Name or date personalisation","Gift wrap"],sizes:["Two-frame set","Three-frame set"],personalised:true,featured:true,badge:"Personalised"},
+  {id:"p6",slug:"desk-plant-gift-set",name:"Desk Plant Gift Set",category:"Plants",type:"Plant & desk accessory set",price:699,image:"https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1000&q=85",color:"#8fa18d",occasions:["Congratulations","Thank You","Corporate"],recipients:["For Colleagues","For Clients","For Parents"],description:"A low-maintenance desk plant in a ceramic planter with a small chocolate and message tag.",included:["Easy-care plant","Ceramic planter","Chocolate","Message tag"],sizes:["Single","Pair"],sameDay:true,personalised:true,featured:true,badge:"Easy care",care:"Place in bright indirect light and water only when the top soil feels dry."},
+  {id:"p7",slug:"premium-anniversary-hamper",name:"Together, Always Anniversary Hamper",category:"Hampers",type:"Flowers, treats & keepsake",price:2799,image:"https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85",color:"#9f5361",occasions:["Anniversary","Romantic"],recipients:["For Him","For Her"],description:"An intimate edit of roses, gourmet treats and a personalised keepsake for celebrating your shared story.",included:["Mini rose arrangement","Gourmet chocolates","Personalised keepsake","Keepsake hamper box"],sizes:["Signature","Grand"],personalised:true,featured:true,badge:"Premium edit"},
+  {id:"p8",slug:"corporate-welcome-kit",name:"New Beginnings Welcome Kit",category:"Corporate",type:"Employee welcome kit",price:1199,starting:true,image:"https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=1000&q=85",color:"#78636b",occasions:["Corporate","Congratulations"],recipients:["For Colleagues","For Clients"],description:"A polished welcome kit with stationery, drinkware and treats, ready for your logo and employee note.",included:["Notebook","Insulated tumbler","Pen","Gourmet treats","Branded box option"],sizes:["Essential","Signature","Executive"],personalised:true,featured:true,badge:"Corporate"},
+  {id:"p9",slug:"sweet-little-surprise",name:"Sweet Little Surprise",category:"Chocolates",type:"Chocolate mini hamper",price:449,image:"https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=1000&q=85",color:"#8e674d",occasions:["Birthday","Thank You"],recipients:["For Children","For Colleagues"],description:"A petite assortment of familiar chocolate favourites wrapped for a small but meaningful gesture.",included:["Assorted chocolates","Gift tray","Ribbon","Message card"],sizes:["Mini","Classic"],sameDay:true,badge:"Under ₹500"},
+  {id:"p10",slug:"peach-lily-vase",name:"Peach Lily Vase",category:"Flowers",type:"Vase arrangement",price:1699,image:"https://images.unsplash.com/photo-1487070183336-b863922373d4?auto=format&fit=crop&w=1000&q=85",color:"#db9d7f",occasions:["Anniversary","Congratulations","Thank You"],recipients:["For Her","For Parents","For Clients"],description:"Lush lilies and complementary blooms in a simple glass vase, arranged in warm peach and cream tones.",included:["Lilies and seasonal blooms","Glass vase","Greenery","Message card"],sizes:["Classic","Grand"],sameDay:true,personalised:true,badge:"Vase arrangement",care:"Top up the vase daily and remove pollen stamens as lilies open."},
+];
+
+export const occasions = ["Birthday","Anniversary","Congratulations","Romantic","Thank You","Get Well Soon","Festival","Corporate"];
+export const categories = ["Flowers","Hampers","Personalised","Plants","Chocolates","Corporate"];
+export const faqs = [
+  ["Is same-day delivery available?",`Selected ready-to-make products may be available for same-day Ahmedabad delivery when requested before ${business.cutOff}. Please confirm on WhatsApp.`],
+  ["Can I select a delivery time?","You can share a preferred window. Exact timing depends on route availability and is confirmed by the shop."],
+  ["Can flowers or products be customised?","Yes. Colours, flower choices and hamper contents can often be adapted to budget and availability."],
+  ["Can I add a personalised message?","Yes. Every order request can include a complimentary short message card."],
+  ["What happens if a flower is unavailable?","Seasonal shades and varieties may vary. Any major substitution should be discussed before payment."],
+  ["Do you offer surprise delivery?","Yes, provided someone can receive the order. We recommend sharing a reachable recipient number only after confirmation."],
+  ["Can I order for a business?","Yes. We create employee, client, event and festival gifting with optional branding."],
+  ["How are payments completed?","Payment instructions are shared only after product availability, delivery charge and final total are confirmed."],
+  ["Is a website submission a confirmed order?","No. It is an enquiry until the shop replies and confirms availability and payment."],
+];
+
+export const money = (value:number) => new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(value);
