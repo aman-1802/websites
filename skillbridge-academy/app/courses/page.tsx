@@ -1,0 +1,5 @@
+import { CourseGrid, SectionHead, Shell } from "../components";
+
+export const metadata = { title: "Skill Courses in Ahmedabad | SkillBridge Academy", description: "Explore practical Spoken English, Tally, Excel, design, web development, marketing and interview courses in Ahmedabad." };
+
+export default function CoursesPage(){ return <Shell><section className="inner-hero"><div className="wrap narrow center"><span className="eyebrow">Explore programmes</span><h1>Find the skill that fits your next step.</h1><p>Filter practical, trainer-led courses by your goal, available time and preferred learning mode.</p></div></section><section className="section"><div className="wrap"><SectionHead eyebrow="All courses" title="Practical learning, clearly structured"/><CourseGrid/></div></section><section className="section mini-cta"><div className="wrap mini-cta-inner"><div><h2>Need help choosing?</h2><p>Talk through your goal with a counsellor—there is no pressure to enrol.</p></div><a className="button" href="/contact">Talk to a Counsellor</a></div></section></Shell> }
