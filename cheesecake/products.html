@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flavors — Unhinged Cheesecake</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">unhinged<br><small>cheesecake</small></div>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="products.html" class="active">flavors</a></li>
+      <li><a href="contact.html">contact</a></li>
+    </ul>
+    <div class="nav-cta-wrap">
+      <div class="pill">coming soon ✦</div>
+      <button class="burger" aria-label="menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <svg class="doodle" style="left:8%;top:20%;width:30px" viewBox="0 0 24 24"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6L12 2z" fill="#2b2016"/></svg>
+  <svg class="doodle" style="right:10%;top:14%;width:26px" viewBox="0 0 24 24"><path d="M4 14c4-6 8-9 16-10" stroke="#2b2016" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div class="eyebrow">the full lineup</div>
+    <h1>all our<br><span style="color:var(--pink-deep);font-style:italic;">flavors.</span></h1>
+    <p>Every box is small-batch, silky, and slightly unpredictable. Pick your obsession — or don't, and get all three.</p>
+
+    <div class="filter-row">
+      <div class="filter-chip active" data-filter="all">all</div>
+      <div class="filter-chip" data-filter="fruity">fruity</div>
+      <div class="filter-chip" data-filter="cozy">cozy &amp; rich</div>
+      <div class="filter-chip" data-filter="light">light &amp; bright</div>
+    </div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="products-grid">
+
+    <div class="product-card" data-tags="fruity cozy">
+      <div class="product-tag">bestseller</div>
+      <div class="product-img"><img src="assets/berry-matcha.webp" alt="Berry Matcha Swirl slice and box"></div>
+      <h3 class="product-title">Berry Matcha Swirl</h3>
+      <p class="product-desc">Tart mixed berries swirled through an earthy matcha cheesecake base. A little sweet, a little bitter, a whole lot of chaos.</p>
+      <div class="product-foot">
+        <span class="price">$42</span>
+        <button class="btn" onclick="addNote(this)">add to box →</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-tags="cozy">
+      <div class="product-tag">crowd favorite</div>
+      <div class="product-img"><img src="assets/biscoff-caramel.webp" alt="Biscoff Caramel Crunch slice and box"></div>
+      <h3 class="product-title">Biscoff Caramel Crunch</h3>
+      <p class="product-desc">Lotus biscuit crunch, gooey salted caramel, and a cheesecake so creamy it should come with a warning label.</p>
+      <div class="product-foot">
+        <span class="price">$45</span>
+        <button class="btn" onclick="addNote(this)">add to box →</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-tags="fruity light">
+      <div class="product-tag">new</div>
+      <div class="product-img"><img src="assets/mango-yuzu.webp" alt="Mango Yuzu Cloud slice and box"></div>
+      <h3 class="product-title">Mango Yuzu Cloud</h3>
+      <p class="product-desc">Bright mango, zesty yuzu, and a cheesecake as light as a daydream. Summer in a slice, all year round.</p>
+      <div class="product-foot">
+        <span class="price">$42</span>
+        <button class="btn" onclick="addNote(this)">add to box →</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-tags="cozy">
+      <div class="product-tag">classic</div>
+      <div class="product-img"><img src="assets/hero-slice.webp" alt="Original slice of cheesecake on a plate"></div>
+      <h3 class="product-title">Original Slightly Unhinged</h3>
+      <p class="product-desc">Our signature recipe. Silky, tangy, buttery crust. The one that started it all — no swirls needed.</p>
+      <div class="product-foot">
+        <span class="price">$38</span>
+        <button class="btn" onclick="addNote(this)">add to box →</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-tags="light fruity">
+      <div class="product-tag">seasonal</div>
+      <div class="product-img" style="background:linear-gradient(160deg,#f2b3c1,#e88ba0);">Raspberry Rose Cloud</div>
+      <h3 class="product-title">Raspberry Rose Cloud</h3>
+      <p class="product-desc">Fresh raspberry coulis over a rosewater-kissed cheesecake. Delicate, floral, a little dramatic.</p>
+      <div class="product-foot">
+        <span class="price">$44</span>
+        <button class="btn" onclick="addNote(this)">add to box →</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-tags="cozy light">
+      <div class="product-tag">gift box</div>
+      <div class="product-img" style="background:linear-gradient(160deg,#c9c3d8,#a99fc4);">The Sampler Trio</div>
+      <h3 class="product-title">The Sampler Trio</h3>
+      <p class="product-desc">Can't choose? Get all three signature slices in one collectible box. Built for sharing (or not).</p>
+      <div class="product-foot">
+        <span class="price">$99</span>
+        <button class="btn" onclick="addNote(this)">add to box →</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="band">
+  <div class="band-join" style="grid-column:1/-1;">
+    <div class="wrap" style="padding:0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+      <div>
+        <h3>can't decide?</h3>
+        <p style="margin-top:10px;color:#d9d2c2;">Join the waitlist and we'll help you pick your first box.</p>
+      </div>
+      <a href="contact.html" class="btn pink">get in touch →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="social-row">
+      <a class="social-icon" href="#" aria-label="instagram">◎</a>
+      <a class="social-icon" href="#" aria-label="tiktok">♪</a>
+      <a class="social-icon" href="contact.html" aria-label="email">✉</a>
+    </div>
+    <div>© 2026 Unhinged Cheesecake. All rights reserved.</div>
+    <div class="footer-note">cheesecake, but make it extra ♡</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Added to your box! ♡</div>
+
+<script src="script.js"></script>
+</body>
+</html>

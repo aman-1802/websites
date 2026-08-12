@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Unhinged Cheesecake</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">unhinged<br><small>cheesecake</small></div>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="products.html">flavors</a></li>
+      <li><a href="contact.html" class="active">contact</a></li>
+    </ul>
+    <div class="nav-cta-wrap">
+      <div class="pill">coming soon ✦</div>
+      <button class="burger" aria-label="menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <svg class="doodle" style="left:8%;top:20%;width:30px" viewBox="0 0 24 24"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6L12 2z" fill="#2b2016"/></svg>
+  <svg class="doodle" style="right:8%;top:16%;width:34px" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6" stroke="#2b2016" stroke-width="2" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div class="eyebrow">say hi</div>
+    <h1>let's<br><span style="color:var(--pink-deep);font-style:italic;">talk cake.</span></h1>
+    <p>Questions, catering requests, or just want to gush about cheesecake? We're all ears (and forks).</p>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="contact-grid">
+
+    <form class="contact-form" id="contact-form">
+      <div class="field">
+        <label for="name">your name</label>
+        <input id="name" type="text" placeholder="Jamie Baker" required>
+      </div>
+      <div class="field">
+        <label for="email">email address</label>
+        <input id="email" type="email" placeholder="jamie@example.com" required>
+      </div>
+      <div class="field">
+        <label for="reason">what's this about</label>
+        <select id="reason">
+          <option>General question</option>
+          <option>Custom / catering order</option>
+          <option>Wholesale &amp; partnerships</option>
+          <option>Press &amp; media</option>
+          <option>Just saying hi ♡</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">message</label>
+        <textarea id="message" placeholder="Tell us what's on your mind..." required></textarea>
+      </div>
+      <button class="btn pink" type="submit">send message
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="form-note">We usually reply within 1-2 days. Zero spam, promise.</p>
+    </form>
+
+    <div class="contact-side">
+      <div class="info-card">
+        <h3>find us</h3>
+        <p>📍 Small-batch bakery, baking your way soon</p>
+        <p>✉ hello@unhingedcheesecake.com</p>
+        <p>📞 (555) 019-2837</p>
+      </div>
+      <div class="info-card" style="background:var(--sage);">
+        <h3>follow along</h3>
+        <div class="social-row" style="margin-top:8px;">
+          <a class="social-icon" href="#" aria-label="instagram">◎</a>
+          <a class="social-icon" href="#" aria-label="tiktok">♪</a>
+          <a class="social-icon" href="mailto:hello@unhingedcheesecake.com" aria-label="email">✉</a>
+        </div>
+      </div>
+
+      <div style="margin-top:26px;">
+        <h3 class="script" style="font-size:1.4rem;">quick answers ♡</h3>
+        <div class="faq-item">
+          <h4>Do you ship nationwide?</h4>
+          <p>Not yet — we're launching local delivery first, with shipping coming soon after.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I customize a flavor?</h4>
+          <p>Absolutely, reach out with the "custom / catering" option and we'll dream it up together.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I join the waitlist?</h4>
+          <p>Head to our <a href="index.html" style="text-decoration:underline;">home page</a> and drop your email — first drops go to the list.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="social-row">
+      <a class="social-icon" href="#" aria-label="instagram">◎</a>
+      <a class="social-icon" href="#" aria-label="tiktok">♪</a>
+      <a class="social-icon" href="mailto:hello@unhingedcheesecake.com" aria-label="email">✉</a>
+    </div>
+    <div>© 2026 Unhinged Cheesecake. All rights reserved.</div>
+    <div class="footer-note">cheesecake, but make it extra ♡</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Message sent! We'll be in touch ♡</div>
+
+<script src="script.js"></script>
+</body>
+</html>
