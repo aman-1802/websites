@@ -353,4 +353,9 @@ footer{
   .nav-links{display:none;}
   .burger{display:block;}
   .hero-badge{display:none;}
+  .wrap{padding-left:18px;padding-right:18px;}
+  .flavors{padding-top:58px;padding-bottom:58px;}
+  .flavors-grid{width:calc(100% - 12px);margin-left:auto;margin-right:auto;gap:22px;}
+  .flavor-card{padding:30px;}
+  .flavor-box{height:245px;}
 }
