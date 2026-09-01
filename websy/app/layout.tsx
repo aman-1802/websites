@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Websy — Aman Agarwal",
-  description: "Portfolio of Aman Agarwal, an independent web designer and developer creating memorable business websites.",
+  metadataBase: new URL("https://www.websy.co.in"),
+  title: "Websy — Websites with a pulse",
+  description: "Websy creates memorable business websites for healthcare, education, e-commerce, and more.",
   keywords: ["web designer portfolio", "website developer portfolio", "business website design", "healthcare website design", "academy website design", "gift shop website", "ecommerce web design"],
   openGraph: {
-    title: "Websy — Aman Agarwal",
-    description: "Selected website design and development work by Aman Agarwal.",
+    title: "Websy — Websites with a pulse",
+    description: "Selected website design and development work by Websy.",
     images: ["/og.png"],
     type: "website",
   },

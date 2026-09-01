@@ -27,7 +27,10 @@ export default function Home() {
           Accept: "application/json",
         },
       });
-      if (!response.ok) throw new Error("Unable to send message");
+      const result = await response.json().catch(() => null);
+      if (!response.ok || result?.success === false || result?.success === "false") {
+        throw new Error("Unable to send message");
+      }
       form.reset();
       setFormState("sent");
     } catch {
@@ -83,6 +86,7 @@ export default function Home() {
         <form className="contact-form" action="https://formsubmit.co/ajax/info@websy.co.in" method="POST" onSubmit={handleContactSubmit}>
           <input type="hidden" name="_subject" value="New message from the Websy portfolio" />
           <input type="hidden" name="_template" value="table" />
+          <input className="honeypot" name="_honey" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
           <label>
             <span>Your name</span>
             <input name="name" type="text" autoComplete="name" required />
@@ -108,8 +112,8 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><strong>Websy.</strong><span>By Aman Agarwal</span></div>
-        <span className="footer-copy">© 2026 Aman Agarwal. All rights reserved.</span>
+        <div className="footer-brand"><strong>Websy.</strong><span>Independent web studio</span></div>
+        <span className="footer-copy">© 2026 Websy. All rights reserved.</span>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>
