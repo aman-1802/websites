@@ -18,10 +18,14 @@ export default function Home() {
     setFormState("sending");
 
     try {
+      const formData = Object.fromEntries(new FormData(form).entries());
       const response = await fetch(form.action, {
         method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
       });
       if (!response.ok) throw new Error("Unable to send message");
       form.reset();
@@ -76,7 +80,7 @@ export default function Home() {
         <p className="kicker">Got something brewing?</p>
         <h2>Let&apos;s give your<br/>website a <em>personality.</em></h2>
         <a className="email" href="mailto:info@websy.co.in">Contact: info@websy.co.in <span>↗</span></a>
-        <form className="contact-form" action="https://formsubmit.co/info@websy.co.in" method="POST" onSubmit={handleContactSubmit}>
+        <form className="contact-form" action="https://formsubmit.co/ajax/info@websy.co.in" method="POST" onSubmit={handleContactSubmit}>
           <input type="hidden" name="_subject" value="New message from the Websy portfolio" />
           <input type="hidden" name="_template" value="table" />
           <label>
