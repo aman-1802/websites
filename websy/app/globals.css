@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
-@import "tailwindcss";
-
 :root { --ink:#172b73; --paper:#fbf6e9; --yellow:#f6b83c; --coral:#ec6c53; --mint:#c3ddbc; --line:#172b73; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
