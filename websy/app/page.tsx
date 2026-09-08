@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 
 const work = [
   { title: "Healthcare", kind: "Healthcare website · patient-first experience", thumbnail: "/projects/healthcare.png", className: "bake", href: "https://clearcare-dental-ahmedabad.vercel.app" },
@@ -11,6 +11,16 @@ const work = [
 
 export default function Home() {
   const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  useEffect(() => {
+    if (document.querySelector("script[data-calendly-widget]")) return;
+
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    script.dataset.calendlyWidget = "true";
+    document.body.appendChild(script);
+  }, []);
 
   async function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -119,7 +129,6 @@ export default function Home() {
         </div>
         <div className="booking-widget">
           <div className="calendly-inline-widget" data-url="https://calendly.com/promptmotion18" style={{ minWidth: 320, height: 700 }} />
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
         </div>
       </section>
 
