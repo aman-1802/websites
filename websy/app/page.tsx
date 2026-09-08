@@ -38,7 +38,7 @@ export default function Home() {
     const calendly = (window as CalendlyWindow).Calendly;
     if (!calendly) return;
     event.preventDefault();
-    calendly.initPopupWidget({ url: "https://calendly.com/promptmotion18" });
+    calendly.initPopupWidget({ url: "https://calendly.com/promptmotion18/new-meeting" });
   }
 
   async function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
@@ -146,7 +146,7 @@ export default function Home() {
           <h2 id="booking-title">Let&apos;s make some<br/><em>time for it.</em></h2>
           <p>Choose a time that suits you and we&apos;ll talk through your website idea.</p>
         </div>
-        <a className="booking-link" href="https://calendly.com/promptmotion18" onClick={openCalendly}>Schedule time with me <span aria-hidden="true">↗</span></a>
+        <a className="booking-link" href="https://calendly.com/promptmotion18/new-meeting" onClick={openCalendly}>Schedule time with me <span aria-hidden="true">↗</span></a>
       </section>
 
       <footer>
