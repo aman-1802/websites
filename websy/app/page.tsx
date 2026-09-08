@@ -2,6 +2,10 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 
+type CalendlyWindow = Window & {
+  Calendly?: { initPopupWidget: (options: { url: string }) => void };
+};
+
 const work = [
   { title: "Healthcare", kind: "Healthcare website · patient-first experience", thumbnail: "/projects/healthcare.png", className: "bake", href: "https://clearcare-dental-ahmedabad.vercel.app" },
   { title: "SkillBridge Academy", kind: "Academy website · learner guidance", thumbnail: "/projects/academy.png", className: "arch", href: "https://skillbridge-academy-theta.vercel.app" },
@@ -13,6 +17,14 @@ export default function Home() {
   const [formState, setFormState] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   useEffect(() => {
+    if (!document.querySelector("link[data-calendly-widget]")) {
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = "https://assets.calendly.com/assets/external/widget.css";
+      stylesheet.dataset.calendlyWidget = "true";
+      document.head.appendChild(stylesheet);
+    }
+
     if (document.querySelector("script[data-calendly-widget]")) return;
 
     const script = document.createElement("script");
@@ -21,6 +33,13 @@ export default function Home() {
     script.dataset.calendlyWidget = "true";
     document.body.appendChild(script);
   }, []);
+
+  function openCalendly(event: React.MouseEvent<HTMLAnchorElement>) {
+    const calendly = (window as CalendlyWindow).Calendly;
+    if (!calendly) return;
+    event.preventDefault();
+    calendly.initPopupWidget({ url: "https://calendly.com/promptmotion18" });
+  }
 
   async function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -127,9 +146,7 @@ export default function Home() {
           <h2 id="booking-title">Let&apos;s make some<br/><em>time for it.</em></h2>
           <p>Choose a time that suits you and we&apos;ll talk through your website idea.</p>
         </div>
-        <div className="booking-widget">
-          <div className="calendly-inline-widget" data-url="https://calendly.com/promptmotion18" style={{ minWidth: 320, height: 700 }} />
-        </div>
+        <a className="booking-link" href="https://calendly.com/promptmotion18" onClick={openCalendly}>Schedule time with me <span aria-hidden="true">↗</span></a>
       </section>
 
       <footer>
