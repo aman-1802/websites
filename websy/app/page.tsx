@@ -111,6 +111,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="booking" aria-labelledby="booking-title">
+        <div className="booking-intro">
+          <p className="kicker">Prefer a quick call?</p>
+          <h2 id="booking-title">Let&apos;s make some<br/><em>time for it.</em></h2>
+          <p>Choose a time that suits you and we&apos;ll talk through your website idea.</p>
+        </div>
+        <div className="booking-widget">
+          <div className="calendly-inline-widget" data-url="https://calendly.com/promptmotion18" style={{ minWidth: 320, height: 700 }} />
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
+        </div>
+      </section>
+
       <footer>
         <div className="footer-brand"><strong>Websy.</strong><span>Independent web studio</span></div>
         <span className="footer-copy">© 2026 Websy. All rights reserved.</span>
