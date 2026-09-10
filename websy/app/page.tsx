@@ -108,7 +108,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="work-intro">Every Websy project starts with the people using it: clearer information, a distinctive visual voice, and an easy path to get in touch, enquire, or buy.</p>
       </section>
 
       <section id="hello" className="hello">
@@ -144,13 +143,8 @@ export default function Home() {
       </section>
 
       <section className="services-preview" aria-labelledby="services-title">
-        <p className="kicker">What Websy does</p>
+        <p className="services-kicker">What Websy does</p>
         <h2 id="services-title">Website design for<br/><em>businesses with character.</em></h2>
-        <div className="service-list">
-          <p><b>01</b> Web design for healthcare and professional services</p>
-          <p><b>02</b> Education and academy websites that guide learners</p>
-          <p><b>03</b> E-commerce websites that make products feel irresistible</p>
-        </div>
         <a className="scribble-link" href="/services">See Websy services <span>↘</span></a>
       </section>
 
