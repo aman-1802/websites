@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
+import Image from "next/image";
 
 type CalendlyWindow = Window & {
   Calendly?: { initPopupWidget: (options: { url: string }) => void };
@@ -70,15 +71,16 @@ export default function Home() {
   return (
     <main>
       <nav className="nav" aria-label="Main navigation">
-        <a className="mark" href="#top" aria-label="Websy home">web<i>sy.</i></a>
-        <a href="#work">Selected work</a>
+        <a className="mark" href="#top" aria-label="Websy home"><Image src="/websy-wordmark-transparent.png" alt="Websy" width={1080} height={330} priority /></a>
+        <a href="/case-studies">Case studies</a>
+        <a href="/services">Services</a>
         <a href="#hello">Contact <span aria-hidden>↗</span></a>
       </nav>
 
       <section id="top" className="hero">
         <div className="eyebrow"><span className="spark">✳</span> Independent web studio <span className="arrow">↘</span></div>
         <h1>Websites with<br/><em>a pulse.</em></h1>
-        <p className="hero-copy">I customise and design memorable business websites—from healthcare and education to e-commerce—for brands too interesting to look like everybody else.</p>
+        <p className="hero-copy">Websy is an independent web design studio creating memorable, easy-to-use business websites—from healthcare and education to e-commerce—for brands too interesting to look like everybody else.</p>
         <a href="#hello" className="scribble-link">You bring the good stuff <span>↘</span></a>
         <div className="hero-art" aria-hidden="true">
           <div className="sun">hi!</div>
@@ -96,16 +98,17 @@ export default function Home() {
       </section>
 
       <section id="work" className="work-section">
-        <div className="section-head"><p className="kicker">Selected website works</p></div>
+        <div className="section-head"><p className="kicker">Selected website design work</p><a className="section-link" href="/case-studies">Explore project focus ↗</a></div>
         <div className="work-grid">
           {work.map((item, index) => (
             <article className={`work-card ${item.className}`} key={item.title}>
               <div className="card-number">0{index + 1}</div>
-              <div className="fake-site"><img className="project-thumbnail" src={item.thumbnail} alt={`${item.title} website thumbnail`} /><span className="window-dots" aria-hidden="true">•••</span></div>
+              <div className="fake-site"><Image className="project-thumbnail" src={item.thumbnail} alt={`${item.title} website thumbnail`} fill sizes="(max-width: 760px) 85vw, 28vw" /><span className="window-dots" aria-hidden="true">•••</span></div>
               <div><h3>{item.title}</h3><p>{item.kind}</p><a className="card-live" href={item.href} target="_blank" rel="noreferrer">View live site <span aria-hidden>↗</span></a></div>
             </article>
           ))}
         </div>
+        <p className="work-intro">Every Websy project starts with the people using it: clearer information, a distinctive visual voice, and an easy path to get in touch, enquire, or buy.</p>
       </section>
 
       <section id="hello" className="hello">
@@ -126,7 +129,7 @@ export default function Home() {
           </label>
           <label className="message-field">
             <span>How can I help?</span>
-            <textarea name="message" rows={4} required />
+          <textarea name="message" rows={6} required />
           </label>
           <button type="submit" disabled={formState === "sending"}>{formState === "sending" ? "Sending…" : <>Send message <span aria-hidden="true">↗</span></>}</button>
           {formState === "sent" && <p className="form-feedback success" role="status">Message sent — I&apos;ll be in touch soon.</p>}
@@ -140,6 +143,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="services-preview" aria-labelledby="services-title">
+        <p className="kicker">What Websy does</p>
+        <h2 id="services-title">Website design for<br/><em>businesses with character.</em></h2>
+        <div className="service-list">
+          <p><b>01</b> Web design for healthcare and professional services</p>
+          <p><b>02</b> Education and academy websites that guide learners</p>
+          <p><b>03</b> E-commerce websites that make products feel irresistible</p>
+        </div>
+        <a className="scribble-link" href="/services">See Websy services <span>↘</span></a>
+      </section>
+
       <section className="booking" aria-labelledby="booking-title">
         <div className="booking-intro">
           <p className="kicker">Prefer a quick call?</p>
@@ -150,9 +164,15 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><strong>Websy.</strong><span>Independent web studio</span></div>
+        <div className="footer-brand"><Image src="/websy-wordmark-transparent.png" alt="Websy" width={1080} height={330} /><span>Independent web design studio</span></div>
         <span className="footer-copy">© 2026 Websy. All rights reserved.</span>
-        <a href="#top">Back to top ↑</a>
+        <div className="footer-actions">
+          <a className="instagram-link" href="https://www.instagram.com/madebywebsy?stkn=MTBsMHpyMnFvdHQycw==" target="_blank" rel="noreferrer" aria-label="Visit Websy on Instagram">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle className="instagram-dot" cx="17.4" cy="6.8" r="1"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="#top">Back to top ↑</a>
+        </div>
       </footer>
     </main>
   );
