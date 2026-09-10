@@ -158,13 +158,18 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><Image src="/websy-wordmark-transparent.png" alt="Websy" width={1080} height={330} /><span>Independent web design studio</span></div>
+        <div className="footer-brand">
+          <div className="footer-brand-top">
+            <Image src="/websy-wordmark-transparent.png" alt="Websy" width={1080} height={330} />
+            <a className="instagram-link" href="https://www.instagram.com/madebywebsy?stkn=MTBsMHpyMnFvdHQycw==" target="_blank" rel="noreferrer" aria-label="Visit Websy on Instagram">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle className="instagram-dot" cx="17.4" cy="6.8" r="1"/></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+          <span>Independent web design studio</span>
+        </div>
         <span className="footer-copy">© 2026 Websy. All rights reserved.</span>
         <div className="footer-actions">
-          <a className="instagram-link" href="https://www.instagram.com/madebywebsy?stkn=MTBsMHpyMnFvdHQycw==" target="_blank" rel="noreferrer" aria-label="Visit Websy on Instagram">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle className="instagram-dot" cx="17.4" cy="6.8" r="1"/></svg>
-            <span>Instagram</span>
-          </a>
           <a href="#top">Back to top ↑</a>
         </div>
       </footer>
